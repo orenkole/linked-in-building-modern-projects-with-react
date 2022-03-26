@@ -5,8 +5,13 @@ import NewTodoForm from "./NewTodoForm.js";
 import "./TodoList.css";
 import { removeTodo } from "./actions.js";
 import { markTodoAsCompleted } from "./actions.js";
+import {displayAlert} from "./thunks";
 
-const TodoList = ({todos = [], onRemovePressed, onCompletedPressed}) => {
+const TodoList = ({
+	todos = [],
+	onRemovePressed,
+	onCompletedPressed,
+}) => {
 	return (
 		<div className="list-wrapper">
 			<NewTodoForm />
