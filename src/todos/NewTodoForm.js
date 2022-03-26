@@ -9,7 +9,7 @@ const NewTodoForm = ({todos, onCreatePressed}) => {
 		<div className="new-todo-form">
 			<input className="new-todo-input" type="text"
 				value={inputValue}
-				onChange
+				onChange={(e) => setInputValue(e.target.value)}
 			/>
 			<button className="new-todo-button"
 				onClick={() => {
