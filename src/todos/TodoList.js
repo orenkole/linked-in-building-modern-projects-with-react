@@ -22,7 +22,12 @@ const TodoList = ({
 	const content = (
 		<div className="list-wrapper">
 			<NewTodoForm />
-			{todos.map(todo => <TodoListItem todo={todo} onRemovePressed={onRemovePressed} onCompletedPressed={onCompletedPressed} />)}
+			{todos.map(todo => <TodoListItem
+				key={todo.id}
+				todo={todo}
+				onRemovePressed={onRemovePressed}
+				onCompletedPressed={onCompletedPressed}
+			/>)}
 		</div>
 	)
 
