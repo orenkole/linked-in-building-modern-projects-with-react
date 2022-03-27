@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {connect} from "react-redux";
 import "./NewTodoForm.css";
+import { getTodosLoading } from "./selectors";
 import { addTodoRequest } from "./thunks";
 
 const NewTodoForm = ({todos, onCreatePressed}) => {
@@ -25,7 +26,7 @@ const NewTodoForm = ({todos, onCreatePressed}) => {
 }
 
 const mapStateToProps = state => ({
-	todos: state.todos,
+	todos: getTodosLoading(state),
 });
 
 const mapDispatchToProps = dispatch => ({
